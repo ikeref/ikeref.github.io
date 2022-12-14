@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ikemen Series Route Reference Site</title>
+  <link rel='stylesheet' href='index.css'>
+  <script src='index.js'></script>
+  <meta charset="UTF-8">
+  <meta name="robots" content="none">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <div id="wikiheader">
+    <img class='wikiimage' src='images/pc_10thannifinale_header.png'>
+    <div id='titletext'><h1>Ikemen Series Route Reference</h1></div>
+  </div>
+
+  <div>
+    <h2>What is this?</h2>
+    <p>This is a place where I transcribe the text of the routes of Ikemen Series games.</p>
+    <p>No images or CGs will be included. I will be including premium stories where possible. Event stories will likely not be included until I am done with main routes.</p>
+  </div>
+  <br><br>
+
+  <div id="updates">
+    Latest update <span class='update'>(December 14, 2022)</span>: Nobunaga's Sequel chapter 4 part 2
+  </div>
+
+  <div id='container'>
+    <div id='gamelist'>
+      <h2>Game List</h2>
+      <div id="gamecontainer">
+        <div class='gameicon'><a href='games/ikemen-sengoku/main.html'><img src='images/logo_sengoku.png'>Ikemen Sengoku</a></div>
+        <div class='gameicon'><a href='games/ikemen-revolution/main.html'><img src='images/logo_kakumei.png'>Ikemen Revolution</a></div>
+        <div class='gameicon'><a href='games/ikemen-vampire/main.html'><img src='images/logo_vampire.png'>Ikemen Vampire</a></div>
+        <!--<div class='gameicon'><a href='games/ikemen-genjiden/main.html'><img src='images/logo_genji.png'>Ikemen Genjiden</a></div>-->
+        <div class='gameicon'><a href='games/ikemen-prince/main.html'><img src='images/logo_prince.png'>Ikemen Prince</a></div>
+        <!--<div class='gameicon'><a href='games/ikemen-villains/main.html'><img src='images/logo_villains.png'>Ikemen Villains</a></div>-->
+      </div>
+    </div>
+    <div id='replacement'>
+      <h2>Name Replace</h2>
+      <p>Change the Main Character's name to the entered value. Persists until you clear browsing data.</p>
+      <div>
+        <input type='text' id='charname'></input>
+        <button onclick='saveName()'>Save Name</button>
+        <br><span id='confirmtext'></span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

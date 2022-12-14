@@ -1,0 +1,265 @@
+:root {
+  --romantic-bg: rgb(249, 218, 223);
+  --dramatic-bg: lavender;
+  --eternal-bg: lightyellow;
+  --common-bg: rgb(206, 206, 206);
+  --extra-bg: lightblue;
+
+}
+
+body {
+  margin: 2vw 3vw;
+  font-family: 'Helvetica';
+  counter-reset: footnotes;
+}
+
+h1, h2, h3 {
+  font-variant: small-caps;
+  font-family: sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2, h3 {
+  text-decoration: underline;
+}
+
+footer {
+  border: 1px dashed darkcyan;
+  margin-top: 3vh;
+  padding: 5px;
+  text-align: center;
+  line-height: 1.5;
+}
+
+/*Main Page*/
+#wikiheader {
+  width: 80vw;
+  height: auto;
+  margin: auto;
+  position: relative;
+}
+
+.wikiimage {
+  width: inherit;
+  height: auto;
+  object-fit: contain;
+  margin: auto;
+  border-radius: 10% 10% 0 0;
+}
+
+#titletext {
+  text-align: center;
+}
+
+#gamecontainer {
+  display: flex;
+  flex-wrap: wrap;
+  width: 50vw;
+  margin: auto;
+  align-items: flex-end;
+  justify-content: space-evenly;
+}
+
+.gameicon {
+  margin: 2vw;
+  text-align: center;
+}
+
+.gameicon img {
+  max-width: 10vw;
+  min-width: 100px;
+  display: block;
+  margin: auto;
+}
+
+#container {
+  display: flex;
+  flex-direction: row;
+}
+
+#gamelist, #replacement {
+  display: flex;
+  flex-direction: column;
+}
+
+#updates {
+  border: 2px solid goldenrod;
+  padding: 10px;
+}
+
+.update {
+  text-decoration: underline dotted red;
+  font-style: italic;
+}
+
+#updates h2 {
+  text-decoration: none;
+}
+
+/*Game Page*/
+.characterlist {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 80vw;
+  justify-content: space-around;
+  margin: auto;
+}
+
+.charactericon {
+  margin: 1vw;
+  text-align: center;
+  font-size: 0.9em;
+}
+
+/*Character Pages*/
+.chartable {
+  float: right;
+  margin-left: 2vw;
+  width: 30vw;
+}
+
+.chartable table {
+  border: 1px solid black;
+  width: 100%;
+  text-align: left;
+}
+
+.chartable table tr:nth-child(even) {
+  background-color: rgb(223, 223, 223);
+}
+
+.chartable > h2 {
+  text-align: center;
+}
+
+.characterimage {
+  text-align: center;
+}
+
+.source {
+  cursor: pointer;
+  color: rgb(195, 1, 156);
+  font-style: italic;
+}
+
+.source::after {
+  counter-increment: footnotes;
+  content: " [" counter(footnotes) "]";
+  vertical-align: super;
+  font-size: 70%;
+}
+
+.tabbutton {
+  display: inline-block;
+  padding: 10px;
+  background: var(--common-bg);
+  border: 1px solid black;
+  border-radius: 5%;
+  cursor: pointer;
+}
+
+.tabbutton:hover {
+  background-color: rgb(100,100,100);
+  color: white;
+}
+
+.routecontainer {
+  flex-wrap: wrap;
+  text-align: center;
+  padding: 5px;
+  border: 1px solid black;
+  margin-bottom: 10px;
+}
+
+.r1, .r2 {
+  display: none;
+}
+
+.routename {
+  flex: 0 0 100%;
+}
+
+.chapterlist {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 0 0 100%;
+  margin-bottom: 10px;
+  justify-content: space-evenly;
+}
+
+.chapterbox {
+  padding: 10px;
+  flex-basis: 0;
+  white-space: nowrap;
+  margin: 2vw;
+  border-radius: 5%;
+  min-width: 10vw;
+}
+
+.extra > .chapterbox {
+  white-space: normal;
+}
+
+.chapterbox div {
+  margin-bottom: 3px;
+}
+
+.chapterbox div:first-child {
+  text-decoration: underline;
+}
+
+.romantic .chapterbox {
+  background-color: var(--romantic-bg);
+}
+
+.dramatic .chapterbox {
+  background-color: var(--dramatic-bg);
+}
+
+.common .chapterbox {
+  background-color: var(--common-bg);
+}
+
+.eternal .chapterbox {
+  background-color: var(--eternal-bg);
+}
+
+.extra .chapterbox {
+  background-color: var(--extra-bg);
+}
+
+/*Route Pages*/
+details {
+  border-left: 1px dotted black;
+}
+
+details > p {
+  margin-left: 2vw;
+}
+
+summary {
+  border-left: none;
+  margin-left: 1vw;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/*Responsive*/
+
+@media screen and (max-width: 600px) {
+  .chartable {
+    float: none;
+    margin: auto;
+  }
+
+  .chapterbox {
+    min-width: 30vw;
+  }
+
+  .extra > .chapterbox {
+    white-space: normal;
+  }
+}
