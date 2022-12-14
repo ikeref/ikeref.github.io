@@ -4,7 +4,7 @@ window.onload = function() {
     return
   } else {
     let mc = localStorage.getItem('mcname')
-    document.body.innerHTML = document.body.innerHTML.replaceAll(MC/g, mc)
+    document.body.innerHTML = document.body.innerHTML.replaceAll("MC", mc)
   }
 }
 
